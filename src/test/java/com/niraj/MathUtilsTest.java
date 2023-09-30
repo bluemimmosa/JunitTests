@@ -7,7 +7,7 @@ import static org.junit.jupiter.api.Assertions.*;
 public class MathUtilsTest {
 
     @Test
-    void test(){
+    void testAdd(){
         MathUtils mu = new MathUtils();
         int expected = 2;
         int actual = mu.add(1, 1);
@@ -24,6 +24,15 @@ public class MathUtilsTest {
         assertIterableEquals(expectedArray, actualArray)
         verifies each item in the iterable are equal in the corresponding positions.
          */
+    }
+
+    @Test
+    void testCircleArea(){
+        MathUtils mu = new MathUtils();
+
+        float expected = 31.416F;
+        float actual = mu.computeCircleArea(5);
+        assertEquals(expected, actual, "The circle area should be calculated by the fucntion.");
     }
 
 }
