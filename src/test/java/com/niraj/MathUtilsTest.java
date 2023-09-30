@@ -8,6 +8,10 @@ public class MathUtilsTest {
 
     @Test
     void test(){
-        System.out.println("This test ran!");
+        MathUtils mu = new MathUtils();
+        int expected = 2;
+        int actual = mu.add(1, 1);
+        assertEquals(expected, actual);
     }
+
 }
