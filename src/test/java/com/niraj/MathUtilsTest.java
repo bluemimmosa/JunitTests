@@ -32,7 +32,13 @@ public class MathUtilsTest {
 
         float expected = 31.416F;
         float actual = mu.computeCircleArea(5);
-        assertEquals(expected, actual, "The circle area should be calculated by the fucntion.");
+        assertEquals(expected, actual, "The circle area should be calculated by the function.");
+    }
+
+    @Test
+    void divideTest(){
+        MathUtils mu = new MathUtils();
+        assertThrows(ArithmeticException.class, () -> mu.div(1,0), "Divide by zero should throw.");
     }
 
 }
